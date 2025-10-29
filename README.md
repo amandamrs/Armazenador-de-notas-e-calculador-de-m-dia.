@@ -1,31 +1,27 @@
-#include <stdio.h>
+## 📚 Calculadora de Média Geral de Notas em C
 
-int main() {
-    
-    float notas[50];
-    int numAlunos;
-    float soma = 0.0;
-    float media;        
-    printf("Olá, vamos armazenar notas e realizar o calculo de média geral? \n");
-    printf("Quantos alunos (até 50) você deseja inserir as notas? ");
-    scanf("%d", &numAlunos);
+Este é um programa simples em C que permite ao usuário inserir as notas de até 50 alunos e, em seguida, calcula e exibe a soma total das notas e a média geral da turma.
 
-    if (numAlunos > 50 || numAlunos < 1) {
-        printf("Número de alunos inválido. O programa será encerrado.\n");
-        return 1;
-    }
+### ✨ Funcionalidades
 
-    for (int i = 0; i < numAlunos; i++) {
-        printf("Digite a nota do aluno %d: ", i + 1);
-        scanf("%f", &notas[i]);
-        soma += notas[i]; 
-    }
+  * **Entrada Dinâmica:** O usuário define quantos alunos terão suas notas inseridas (limite de 50).
+  * **Armazenamento:** Utiliza um vetor de `float` (`notas[50]`) para guardar as notas.
+  * **Cálculo:** Realiza a soma de todas as notas e calcula a média geral.
+  * **Validação:** Verifica se o número de alunos está dentro do limite permitido (1 a 50).
+  * **Saída Formatada:** Exibe a soma e a média com duas casas decimais.
 
-    media = soma / numAlunos;
+### ⚙️ Detalhes Técnicos
 
-    printf("\n--- Resultados ---\n");
-    printf("A soma total das notas é: %.2f\n", soma);
-    printf("A média geral das notas é: %.2f\n", media);
+  * **Linguagem:** C
+  * **Armazenamento:**
+      * Um array de ponto flutuante (`float notas[50]`) armazena as notas dos alunos.
+      * A variável `numAlunos` (inteiro) controla o tamanho real de dados a ser lido, garantindo que o programa utilize apenas a porção necessária do vetor.
+  * **Estruturas de Controle:**
+      * Um *bloco condicional* (`if`) verifica a validade da entrada de `numAlunos`.
+      * Um *laço de repetição* (`for`) é utilizado para:
+        1.  Coletar as notas individualmente.
+        2.  Acumular a soma total das notas na variável `soma`.
+  * **Tipos de Dados:** Utiliza `float` para as notas, a soma e a média, garantindo a precisão em números não inteiros.
 
-    return 0;
-}
+👤 Autora
+***amandamrs***
